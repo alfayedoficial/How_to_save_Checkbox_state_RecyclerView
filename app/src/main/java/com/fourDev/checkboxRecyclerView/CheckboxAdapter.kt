@@ -46,12 +46,7 @@ class CheckboxAdapter :RecyclerView.Adapter<CheckboxAdapter.OrdersAdapterViewHol
         asyncListDiffer.submitList(orderResponse)
     }
 
-    fun clearSelectedItems() {
-        if (orderModels.isNotEmpty()) {
-            orderModels.clear()
-            notifyDataSetChanged()
-        }
-    }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrdersAdapterViewHolder {
         return OrdersAdapterViewHolder(getBindingRow(parent, R.layout.item_rv_orders) as ItemRvOrdersBinding)

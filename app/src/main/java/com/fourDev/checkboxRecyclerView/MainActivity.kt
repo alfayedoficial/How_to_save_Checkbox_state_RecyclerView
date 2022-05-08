@@ -65,10 +65,8 @@ class MainActivity : AppCompatActivity() {
     private fun filterList(status: String) {
         adapter.apply {
             if (status == UtilRecycler.OrderStatus.ALL.value) {
-                clearSelectedItems()
                 saveData(orderResponseItems)
             } else {
-                clearSelectedItems()
                 saveData(orderResponseItems.filter { it.orderStatus == status })
             }
         }
